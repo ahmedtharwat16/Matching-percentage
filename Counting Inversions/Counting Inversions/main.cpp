@@ -62,7 +62,6 @@ int* getArray(char* filename,int n){
 float getMatchingPercentage(long inv,int len){
     int maxinv=len*(len-1)/2;     //order of n^2
     return 100-(((float)inv/(float)maxinv)*100);
-//    return maxinv/inv*100;
 }
 
 int main(int argc, const char * argv[]) {
