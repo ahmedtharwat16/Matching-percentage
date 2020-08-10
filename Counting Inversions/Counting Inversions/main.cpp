@@ -26,7 +26,6 @@ long merge_count(int* arr,int first1 ,int last1,int last2){
             int temp=first1;
             while (temp<=last1)
                 inversions[k++]=make_pair(arr[first2],arr[temp++]);
-//                cout<<"koko"<<endl;
             result[i++]=arr[first2++];
         }
     }
@@ -67,15 +66,11 @@ float getMatchingPercentage(long inv,int len){
 }
 
 int main(int argc, const char * argv[]) {
-//    int array[6]= {1,3,5,2,4,6};
+//    int array[6]= {1,3,5,2,4,6};  //testcase I
 
-    int array[6]={1,5,3,6,4,2};
+//    int array[6]={1,5,3,6,4,2};     //testcaseII
     inversions=
     (pair<int, int>*)malloc(sizeof(pair<int, int>)*pow(sizeof(array)/sizeof(array[0]),2));
-//    cout<<count(getArray("/Users/ahmedtharwatwagdy/Documents/Algorithms course/Assignments/Counting Inversions/IntegerArray.txt", 100000),0,999)<<endl;
-//    for(int i=0 ;i<=5;i++)
-//        cout<<" "<<array[i]
-//    cout<<endl;
     cout<<"Matching Percentage= "<<getMatchingPercentage(count(array, 0, 5),sizeof(array)/sizeof(array[0]))<<"%"<<endl;
     for (int i=0 ;i<k; i++) {
         cout<<i<<"   ";
